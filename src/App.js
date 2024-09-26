@@ -1,9 +1,16 @@
 import React from "react";
-import Login from "./pages/auth/login";
+import Router from "./routes/Router";
+import "./App.css"
+// import Login from "./pages/auth/login";
+// import Signup from "./pages/auth/Signup";
 
 const App = () => {
-  return(
-    <Login />
+  return (
+    <div className="root">
+      <Router />
+      {/* <Login />
+        <Signup /> */}
+    </div>
   );
 };
 

@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import TextInput from "../../components/TextInput";
-import Button from "../../components/Button";
+import React, { useState } from "react";import Button from "../../../components/Button";
+import TextInput from "../../../components/TextInput";
+import { Link } from "react-router-dom";
+import "./login.css"
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -17,7 +18,7 @@ const Login = () => {
     }
 
     try {
-    //   throw new Error("Simulated error for testing the catch block");
+      //   throw new Error("Simulated error for testing the catch block");
       console.log({
         email: email,
         password: password,
@@ -54,6 +55,12 @@ const Login = () => {
           value={password}
           setValue={setPassword}
         />
+      </div>
+      <div>
+        <p>
+          {/* <a href="/register">Don't have an account? Create one</a> */}
+          <Link to={"/register"}>Don't have an account? Create one</Link>
+        </p>
       </div>
       <Button buttonTitle={"Login"} onPress={() => handleLogin()} />
     </div>
