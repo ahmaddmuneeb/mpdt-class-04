@@ -1,11 +1,19 @@
-import React, { useState } from "react";import Button from "../../../components/Button";
+import React, { useState } from "react";
+import Button from "../../../components/Button";
 import TextInput from "../../../components/TextInput";
-import { Link } from "react-router-dom";
-import "./login.css"
+import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import "./login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  // const navigation = useRoutes();
+
+  // let [searchParams, setSearchParams] = useSearchParams();
+  // const params = useNavigate();
+  const params = useParams();
+  console.log({ "[params]:: ": params });
 
   const handleLogin = () => {
     // console.log({
@@ -30,6 +38,9 @@ const Login = () => {
 
   return (
     <div>
+      <p>
+        {params?.name} {params?.age}
+      </p>
       {/* logo */}
       <div>
         <img src="/logo192.png" alt="logo" />
