@@ -26,7 +26,7 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Dashboard />} />
-        <Route path="/login/:name/:age" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Signup />} />
         {/* {isRouteValid ? (
           <>

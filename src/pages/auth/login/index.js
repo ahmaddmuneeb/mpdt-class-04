@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "../../../components/Button";
 import TextInput from "../../../components/TextInput";
-import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import "./login.css";
 
 const Login = () => {
@@ -12,7 +12,9 @@ const Login = () => {
 
   // let [searchParams, setSearchParams] = useSearchParams();
   // const params = useNavigate();
-  const params = useParams();
+  // const params = useParams();
+  // console.log({ "[params]:: ": params });
+  const params = useLocation();
   console.log({ "[params]:: ": params });
 
   const handleLogin = () => {
@@ -38,9 +40,9 @@ const Login = () => {
 
   return (
     <div>
-      <p>
+      {/* <p>
         {params?.name} {params?.age}
-      </p>
+      </p> */}
       {/* logo */}
       <div>
         <img src="/logo192.png" alt="logo" />
